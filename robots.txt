@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+Disallow: /_original/
+Disallow: /previews/
+Disallow: /contracts/
+Disallow: /*.pdf$
+Disallow: /*.docx$
+
+# 常见低质爬虫
+User-agent: AhrefsBot
+Disallow: /
+User-agent: SemrushBot
+Disallow: /
+User-agent: MJ12bot
+Disallow: /
+User-agent: DotBot
+Disallow: /
+
+Sitemap: https://www.tiexinda.com/sitemap.xml

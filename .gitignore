@@ -1,0 +1,14 @@
+.DS_Store
+
+# Source / working copies and generated previews
+_original/
+previews/
+
+# Private or temporary documents
+contracts/
+*.pdf
+*.docx
+
+# Local/editor noise
+.idea/
+.vscode/

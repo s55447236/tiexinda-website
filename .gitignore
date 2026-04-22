@@ -3,6 +3,7 @@
 # Source / working copies and generated previews
 _original/
 previews/
+imgs/service/_raw/
 
 # Private or temporary documents
 contracts/

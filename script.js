@@ -108,13 +108,17 @@ const PREVIEW_SETS = {
   certificates: {
     title: "资质证书",
     items: [
-      { src: "imgs/service/tmp-zizhi.jpg", label: "建筑业企业资质证书 · 建筑/机电工程施工总承包贰级" },
+      { src: "imgs/tmp-zizhi.jpg", label: "电力工程施工总承包资质" },
+      { src: "imgs/tmp-zizhi.jpg", label: "建筑业企业资质证书 · 建筑/机电工程施工总承包贰级" },
+      { src: "imgs/tmp-zizhi.jpg", label: "承装（修、试）电力设施许可证" },
     ],
   },
   compliance: {
     title: "合规文件",
     items: [
-      { src: "imgs/service/tmp-anzhi.jpg", label: "安全生产许可证" },
+      { src: "imgs/tmp-anzhi.jpg", label: "安全生产许可证" },
+      { src: "imgs/tmp-anzhi.jpg", label: "安全生产许可证（公示信息）" },
+      { src: "imgs/tmp-anzhi.jpg", label: "合规经营及体系文件" },
     ],
   },
 };
@@ -150,11 +154,11 @@ const renderPreview = () => {
   }
 };
 
-const openPreview = (id) => {
+const openPreview = (id, startIndex = 0) => {
   const set = PREVIEW_SETS[id];
   if (!set || !previewModal) return;
   previewItems = set.items;
-  previewIndex = 0;
+  previewIndex = Math.max(0, Math.min(previewItems.length - 1, startIndex));
   if (previewTitle) previewTitle.textContent = set.title;
   renderPreview();
   previewModal.classList.add("is-open");
@@ -179,7 +183,7 @@ const shiftPreview = (delta) => {
 document.querySelectorAll("[data-preview-trigger]").forEach((trigger) => {
   trigger.addEventListener("click", () => {
     const id = trigger.dataset.previewId;
-    if (id) openPreview(id);
+    if (id) openPreview(id, 0);
   });
 });
 
@@ -223,7 +227,10 @@ const closeContactModal = () => {
 };
 
 document.querySelectorAll("[data-contact-trigger]").forEach((trigger) => {
-  trigger.addEventListener("click", openContactModal);
+  trigger.addEventListener("click", (event) => {
+    if (trigger.tagName === "A") event.preventDefault();
+    openContactModal();
+  });
 });
 
 if (contactModal) {
@@ -238,6 +245,39 @@ if (contactModal) {
   });
 }
 
+// 公司资质：右侧预览区 max-height 与左侧文案等高（桌面两栏）
+const qualificationSync = document.querySelector(".qualification-sync");
+const qualificationCopy = qualificationSync?.querySelector(".qualification-copy-body");
+const qualificationDocs = qualificationSync?.querySelector(".qualification-docs");
+const qualDocsMq = window.matchMedia("(min-width: 901px)");
+
+const syncQualificationDocsHeight = () => {
+  if (!qualificationDocs || !qualificationCopy) return;
+  if (qualDocsMq.matches) {
+    qualificationDocs.style.height = `${qualificationCopy.offsetHeight}px`;
+  } else {
+    qualificationDocs.style.height = "";
+  }
+};
+
+if (qualificationSync && qualificationCopy && qualificationDocs) {
+  syncQualificationDocsHeight();
+  if (typeof ResizeObserver !== "undefined") {
+    const ro = new ResizeObserver(() => syncQualificationDocsHeight());
+    ro.observe(qualificationCopy);
+    ro.observe(qualificationSync);
+  }
+  window.addEventListener("resize", syncQualificationDocsHeight, { passive: true });
+  if (qualDocsMq.addEventListener) {
+    qualDocsMq.addEventListener("change", syncQualificationDocsHeight);
+  } else if (qualDocsMq.addListener) {
+    qualDocsMq.addListener(syncQualificationDocsHeight);
+  }
+  if (document.fonts?.ready) {
+    document.fonts.ready.then(syncQualificationDocsHeight);
+  }
+}
+
 // 滚动进入视口淡入（全站通用）
 if (
   "IntersectionObserver" in window &&
@@ -247,12 +287,12 @@ if (
 
   // 分组卡片(stagger 依次入场)
   const staggerGroups = [
-    ".scope-cards",
+    ".scope-grid",
     ".capability-grid",
     ".projects-grid",
     ".collaboration-grid",
-    ".qualification-list",
     ".qualification-docs",
+    ".qualification-list",
     ".process-band",
     ".about-stats",
   ];
@@ -274,7 +314,8 @@ if (
     ".capability-head",
     ".projects-head",
     ".collaboration-head",
-    ".qualification-copy",
+    ".qualification-intro",
+    ".qualification-copy-body",
     ".contact-panel > .eyebrow",
     ".contact-panel > h2",
     ".contact-lead",
@@ -302,8 +343,13 @@ if (
 }
 
 // 数字滚动动画（统计卡片）
+// HTML 中 strong 的初始文本已写成最终值（渐进增强：JS 禁用时用户依然看到 200+/100%）
 const countTargets = document.querySelectorAll("[data-count-to]");
 if (countTargets.length) {
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
   const animateCount = (el) => {
     const target = Number(el.dataset.countTo) || 0;
     const suffix = el.dataset.countSuffix || "";
@@ -319,7 +365,9 @@ if (countTargets.length) {
     requestAnimationFrame(step);
   };
 
-  if ("IntersectionObserver" in window) {
+  if (prefersReducedMotion) {
+    // 用户要求减少动效:保持 HTML 里的最终值,不做动画
+  } else if ("IntersectionObserver" in window) {
     const countObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -332,7 +380,10 @@ if (countTargets.length) {
       },
       { threshold: 0.5 }
     );
-    countTargets.forEach((el) => countObserver.observe(el));
+    countTargets.forEach((el) => {
+      el.textContent = "0" + (el.dataset.countSuffix || "");
+      countObserver.observe(el);
+    });
   } else {
     countTargets.forEach((el) => animateCount(el));
   }
@@ -502,6 +553,43 @@ if (projectsCarousel) {
         render();
       }
     });
+
+    /* 鼠标滚轮:在案例区内先逐屏切换轮播,到首/尾后再交给页面滚动 */
+    const casesSection = document.getElementById("cases");
+    const casesHead = casesSection?.querySelector(".projects-head");
+    if (!reducedMotion && casesSection && casesHead) {
+      let wheelCooldown = false;
+      casesSection.addEventListener(
+        "wheel",
+        (event) => {
+          if (!casesSection.contains(event.target)) return;
+          if (casesHead.contains(event.target)) return;
+
+          const max = getMax();
+          const dy = event.deltaY;
+          if (Math.abs(dy) < 8) return;
+
+          const towardNext = dy > 0;
+          const towardPrev = dy < 0;
+          const canAdvance =
+            (towardNext && index < max) || (towardPrev && index > 0);
+          if (!canAdvance) return;
+
+          if (wheelCooldown) {
+            event.preventDefault();
+            return;
+          }
+          event.preventDefault();
+          wheelCooldown = true;
+          stopAutoplay();
+          go(towardNext ? 1 : -1);
+          window.setTimeout(() => {
+            wheelCooldown = false;
+          }, 420);
+        },
+        { passive: false }
+      );
+    }
 
     // 触摸 swipe
     let touchStartX = 0;

@@ -78,8 +78,17 @@
           {
             "@type": "ContactPoint",
             "contactType": "sales",
+            "name": "边经理",
             "telephone": "+86-186-3310-2503",
             "email": "18633102503@163.com",
+            "availableLanguage": ["zh-CN"],
+            "areaServed": "CN"
+          },
+          {
+            "@type": "ContactPoint",
+            "contactType": "sales",
+            "name": "张经理",
+            "telephone": "+86-139-0325-0383",
             "availableLanguage": ["zh-CN"],
             "areaServed": "CN"
           }
@@ -126,16 +135,18 @@
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="#home" aria-label="北京铁鑫达电力工程有限公司首页">
-        <img class="brand-logo" src="imgs/service/logo.png" alt="北京铁鑫达电力工程有限公司">
+        <img class="brand-logo" src="imgs/logo.png" alt="北京铁鑫达电力工程有限公司">
       </a>
       <nav class="nav" id="site-nav" aria-label="主导航">
-        <a href="#about">公司定位</a>
+        <a href="#home">首页</a>
         <a href="#services">核心业务</a>
-        <a href="#capability">工程能力</a>
+        <a href="#about">公司定位</a>
         <a href="#cases">典型案例</a>
-        <a href="#contact" class="nav-cta">联系我们</a>
+        <a href="#capability">工程能力</a>
+        <a href="#qualification">公司资质</a>
+        <a href="#contact" class="nav-cta" data-contact-trigger>联系我们</a>
       </nav>
-      <a class="header-cta" href="#contact">联系我们</a>
+      <a class="header-cta" href="#contact" data-contact-trigger>联系我们</a>
       <button class="nav-toggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
@@ -153,8 +164,8 @@
     <section class="hero" id="home" aria-label="首页封面">
       <div class="wrap">
         <div class="hero-copy">
-          <p class="hero-kicker">交通基础设施电力服务商</p>
-          <h1>输电线路交通基础设施<br>跨越工程专业服务商</h1>
+          <p class="hero-kicker">正在接受项目咨询，欢迎联系对接</p>
+          <h1>专注<span class="hero-slogan-accent">铁路·公路</span>及跨越工程<br>输电线路迁改与专项服务</h1>
           <p>
             面向电网及国家级交通基础设施项目，提供在既有铁路、高速公路及复杂交通场景下的输电线路迁改与专项跨越实施服务。
           </p>
@@ -166,7 +177,7 @@
             <span>跨越架工程</span>
           </div>
           <div class="hero-actions">
-            <a class="button-primary" href="#contact">获取专项技术方案</a>
+            <button type="button" class="button-primary" data-contact-trigger>联系我们</button>
             <a class="button-secondary" href="cases.html">查看往期项目案例</a>
           </div>
         </div>
@@ -210,40 +221,6 @@
             <p>工程验收移交</p>
           </div>
         </article>
-      </div>
-    </section>
-
-    <section class="section about-section" id="about">
-      <div class="wrap about-grid">
-        <div class="about-copy">
-          <p class="eyebrow">公司定位</p>
-          <h2>专注解决输电线路与<br>交通基础设施冲突问题</h2>
-          <p>公司聚焦输电线路与铁路、公路等交通基础设施交叉场景，提供跨越施工、线路迁改及专项工程服务。</p>
-          <p>具备在既有交通系统运行条件下组织施工的能力，可满足电网及大型基础设施项目对安全性、合规性及施工组织的要求。</p>
-          <div class="about-stats">
-            <div class="about-stat">
-              <strong data-count-to="200" data-count-suffix="+">0+</strong>
-              <span>完成跨越项目</span>
-            </div>
-            <div class="about-stat">
-              <strong data-count-to="100" data-count-suffix="%">0%</strong>
-              <span>安全交付率</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="about-media">
-          <img loading="lazy" decoding="async" src="imgs/service/1.jpg" alt="铁鑫达跨越工程施工现场:输电塔下的标准化作业">
-          <div class="about-badge">
-            <div class="about-badge-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="24" height="24"><path d="M4 16h16M6 16v-3a6 6 0 0 1 12 0v3M10 7V5h4v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <div>
-              <h4>专业施工团队</h4>
-              <p>持证上岗，经验丰富</p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -300,14 +277,396 @@
       </div>
     </section>
 
+    <section class="section about-section" id="about">
+      <div class="wrap about-grid">
+        <div class="about-copy">
+          <p class="eyebrow">公司定位</p>
+          <h2>专注解决输电线路与<br>交通基础设施冲突问题</h2>
+          <p>公司聚焦输电线路与铁路、公路等交通基础设施交叉场景，提供跨越施工、线路迁改及专项工程服务。</p>
+          <p>具备在既有交通系统运行条件下组织施工的能力，可满足电网及大型基础设施项目对安全性、合规性及施工组织的要求。</p>
+          <div class="about-stats">
+            <div class="about-stat">
+              <strong data-count-to="200" data-count-suffix="+">200+</strong>
+              <span>完成跨越项目</span>
+            </div>
+            <div class="about-stat">
+              <strong data-count-to="100" data-count-suffix="%">100%</strong>
+              <span>安全交付率</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-media">
+          <img loading="lazy" decoding="async" src="imgs/service/about-crew-tower-work.jpg" alt="铁鑫达专业施工团队:输电塔上的高空作业现场">
+          <div class="about-badge">
+            <div class="about-badge-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24"><path d="M4 16h16M6 16v-3a6 6 0 0 1 12 0v3M10 7V5h4v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <h4>专业施工团队</h4>
+              <p>持证上岗，经验丰富</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-section" id="cases">
+      <div class="wrap">
+        <div class="projects-head">
+          <div>
+            <p class="eyebrow">典型案例</p>
+            <h2>已累计服务 <em>200+</em> 项国家重点工程</h2>
+          </div>
+          <a class="projects-more-btn" href="cases.html">
+            查看更多案例
+            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <div class="projects-carousel" data-projects-carousel role="region" aria-roledescription="案例轮播" aria-label="典型案例" tabindex="0">
+          <button type="button" class="pager-arrow pager-arrow-side pager-arrow-prev" data-carousel-prev aria-label="上一组案例">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="m15 5-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button type="button" class="pager-arrow pager-arrow-side pager-arrow-next" data-carousel-next aria-label="下一组案例">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="projects-track">
+            <article class="project-card" data-category="cross">
+              <div class="project-cover">
+                <img loading="lazy" decoding="async" src="imgs/service/case-anding-110kv-jinghu-hsr-protection.jpg" alt="安定垃圾焚烧电厂110kV送出跨越京沪高铁与京沪铁路施工防护工程">
+              </div>
+              <div class="project-body">
+                <p class="project-meta">
+                  <span class="project-pin" aria-hidden="true">
+                    <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-pin"/></svg>
+                  </span>
+                  国网北京市电力公司
+                </p>
+                <h3>安定垃圾焚烧电厂 110kV 送出工程中跨越京沪高铁及京沪铁路电力线路施工防护及专项保障工程</h3>
+                <div class="project-info">
+                  <div>
+                    <span class="project-label">服务内容</span>
+                    <p>针对送出线路跨越京沪高铁及京沪铁路段，实施电力施工全过程防护、组织协调及现场安全保障</p>
+                  </div>
+                  <div>
+                    <span class="project-label">工程特点</span>
+                    <p>同时跨越高铁与既有铁路干线，双重运营线路保护要求高，施工窗口严格受限，安全风险等级高</p>
+                  </div>
+                </div>
+                <button type="button" class="project-contact" data-contact-trigger>
+                  联系我们
+                  <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="cross">
+              <div class="project-cover">
+                <img loading="lazy" decoding="async" src="imgs/service/case-rongbai-110kv-jinbao-hsr-night-protection.jpg" alt="110kV容白线跨越津保高铁桥拆除及防护工程">
+              </div>
+              <div class="project-body">
+                <p class="project-meta">
+                  <span class="project-pin" aria-hidden="true">
+                    <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-pin"/></svg>
+                  </span>
+                  中铁十二局集团有限公司
+                </p>
+                <h3>S333 省道容东至 S042 改线段工程中 110kV 容白线 (N68-N69 段) 跨越津保高铁桥 (K80+502) 既有电力线路拆除及跨越防护专项工程</h3>
+                <div class="project-info">
+                  <div>
+                    <span class="project-label">服务内容</span>
+                    <p>拆除跨越高铁桥既有 110kV 线路，实施跨越防护及施工组织配合</p>
+                  </div>
+                  <div>
+                    <span class="project-label">工程特点</span>
+                    <p>跨越运营高铁桥梁，施工窗口受限，铁路保护要求高，风险控制要求严格</p>
+                  </div>
+                </div>
+                <button type="button" class="project-contact" data-contact-trigger>
+                  联系我们
+                  <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="relocation">
+              <div class="project-cover">
+                <img loading="lazy" decoding="async" src="imgs/service/case-jizhou-10kv-panyang-rail-removal.jpg" alt="蓟州10kV潘杨214线路跨铁路段拆除工程">
+              </div>
+              <div class="project-body">
+                <p class="project-meta">
+                  <span class="project-pin" aria-hidden="true">
+                    <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-pin"/></svg>
+                  </span>
+                  国网天津市电力公司蓟州供电分公司
+                </p>
+                <h3>蓟州区「1001 工程」10kV 潘杨 214 线路 (3#-4# 杆) 跨铁路段既有线路拆除工程</h3>
+                <div class="project-info">
+                  <div>
+                    <span class="project-label">服务内容</span>
+                    <p>对跨越铁路段10kV线路实施拆除及现场防护</p>
+                  </div>
+                  <div>
+                    <span class="project-label">工程特点</span>
+                    <p>涉及铁路运行区，需协调铁路窗口期，施工组织复杂</p>
+                  </div>
+                </div>
+                <button type="button" class="project-contact" data-contact-trigger>
+                  联系我们
+                  <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="cross">
+              <div class="project-cover">
+                <img loading="lazy" decoding="async" src="imgs/service/case-datai-10kv-electrified-railway-scaffold.jpg" alt="10kV大台线跨电气化铁路改造工程跨越架现场与安全交底">
+              </div>
+              <div class="project-body">
+                <p class="project-meta">
+                  <span class="project-pin" aria-hidden="true">
+                    <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-pin"/></svg>
+                  </span>
+                  秦皇岛福电实业集团（抚宁电力工程处）
+                </p>
+                <h3>10kV 大台线李各庄分支跨电气化铁路改造工程跨越架搭设及拆除专项工程</h3>
+                <div class="project-info">
+                  <div>
+                    <span class="project-label">服务内容</span>
+                    <p>实施跨越架搭设、拆除及全过程安全防护</p>
+                  </div>
+                  <div>
+                    <span class="project-label">工程特点</span>
+                    <p>电气化铁路环境，安全距离及防护标准高</p>
+                  </div>
+                </div>
+                <button type="button" class="project-contact" data-contact-trigger>
+                  联系我们
+                  <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="support">
+              <div class="project-cover">
+                <img loading="lazy" decoding="async" src="imgs/service/case-tongtang-35kv-line-drop-night-protection.jpg" alt="通唐路及南城东路35kV铺城铺海线路落线安全防护工程">
+              </div>
+              <div class="project-body">
+                <p class="project-meta">
+                  <span class="project-pin" aria-hidden="true">
+                    <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-pin"/></svg>
+                  </span>
+                  天津市金地城市建设有限公司
+                </p>
+                <h3>通唐路及南城东路区域 35kV 铺城/铺海线路落线施工安全防护工程</h3>
+                <div class="project-info">
+                  <div>
+                    <span class="project-label">服务内容</span>
+                    <p>配合线路落线施工，提供跨越防护及现场安全保障</p>
+                  </div>
+                  <div>
+                    <span class="project-label">工程特点</span>
+                    <p>城市道路交叉施工，环境复杂，安全组织要求高</p>
+                  </div>
+                </div>
+                <button type="button" class="project-contact" data-contact-trigger>
+                  联系我们
+                  <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="support">
+              <div class="project-cover">
+                <img loading="lazy" decoding="async" src="imgs/service/case-lingang-railway-catenary-emergency-repair.jpg" alt="临港铁路专用线接触网事故抢修及复旧工程,施工现场参建人员">
+              </div>
+              <div class="project-body">
+                <p class="project-meta">
+                  <span class="project-pin" aria-hidden="true">
+                    <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-pin"/></svg>
+                  </span>
+                  天津南环铁路电务有限责任公司
+                </p>
+                <h3>临港铁路专用线接触网设备事故抢修及复旧施工工程（11.01 事故）</h3>
+                <div class="project-info">
+                  <div>
+                    <span class="project-label">服务内容</span>
+                    <p>完成接触网设备恢复及应急抢修施工</p>
+                  </div>
+                  <div>
+                    <span class="project-label">工程特点</span>
+                    <p>应急工程，工期极短，对响应速度要求高</p>
+                  </div>
+                </div>
+                <button type="button" class="project-contact" data-contact-trigger>
+                  联系我们
+                  <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="relocation">
+              <div class="project-cover">
+                <img loading="lazy" decoding="async" src="imgs/service/case-wujiapai-10kv-jinji-railway-cable-underground.jpg" alt="10kV吴家牌24线路跨津蓟铁路架空改电缆入地工程">
+              </div>
+              <div class="project-body">
+                <p class="project-meta">
+                  <span class="project-pin" aria-hidden="true">
+                    <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-pin"/></svg>
+                  </span>
+                  国网天津宝坻供电公司
+                </p>
+                <h3>10kV 吴家牌 24 线路等跨越津蓟铁路架空线路改电缆入地工程</h3>
+                <div class="project-info">
+                  <div>
+                    <span class="project-label">服务内容</span>
+                    <p>实施架空改电缆入地及跨越铁路段施工</p>
+                  </div>
+                  <div>
+                    <span class="project-label">工程特点</span>
+                    <p>涉及铁路保护区，施工组织及审批流程复杂</p>
+                  </div>
+                </div>
+                <button type="button" class="project-contact" data-contact-trigger>
+                  联系我们
+                  <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="substation">
+              <div class="project-cover">
+                <img loading="lazy" decoding="async" src="imgs/service/case-liuziying-110kv-substation-jinji-railway-service.jpg" alt="莲子营110kV变电站10kV新出线路跨津蓟铁路架空改电缆技术服务">
+              </div>
+              <div class="project-body">
+                <p class="project-meta">
+                  <span class="project-pin" aria-hidden="true">
+                    <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-pin"/></svg>
+                  </span>
+                  国网天津宝坻供电公司
+                </p>
+                <h3>莲子营 110kV 变电站 10kV 新出线路 (11-13#) 跨越津蓟铁路架空改电缆入地工程技术服务</h3>
+                <div class="project-info">
+                  <div>
+                    <span class="project-label">服务内容</span>
+                    <p>提供技术方案、跨越设计及施工支撑服务</p>
+                  </div>
+                  <div>
+                    <span class="project-label">工程特点</span>
+                    <p>技术服务型项目，需匹配铁路及电网双重规范</p>
+                  </div>
+                </div>
+                <button type="button" class="project-contact" data-contact-trigger>
+                  联系我们
+                  <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="support">
+              <div class="project-cover">
+                <img loading="lazy" decoding="async" src="imgs/service/case-wenfeng-chini-pipeline-caofeidian-railway-underpass.jpg" alt="赤泥输送管线下穿曹妃甸港铁路防护工程">
+              </div>
+              <div class="project-body">
+                <p class="project-meta">
+                  <span class="project-pin" aria-hidden="true">
+                    <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-pin"/></svg>
+                  </span>
+                  河北文丰钢铁有限公司
+                </p>
+                <h3>赤泥输送管线下穿曹妃甸港铁路工程防护及专项施工工程</h3>
+                <div class="project-info">
+                  <div>
+                    <span class="project-label">服务内容</span>
+                    <p>实施铁路下穿区域防护及施工配合</p>
+                  </div>
+                  <div>
+                    <span class="project-label">工程特点</span>
+                    <p>工业管线 + 铁路交叉场景，施工协调难度大</p>
+                  </div>
+                </div>
+                <button type="button" class="project-contact" data-contact-trigger>
+                  联系我们
+                  <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="renewable">
+              <div class="project-cover">
+                <img loading="lazy" decoding="async" src="imgs/service/case-zhangjiakou-pv-110kv-jingbao-rail-crossing.jpg" alt="张家口光伏发电110kV送出线路跨京包铁路施工工程">
+              </div>
+              <div class="project-body">
+                <p class="project-meta">
+                  <span class="project-pin" aria-hidden="true">
+                    <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-pin"/></svg>
+                  </span>
+                  张家口发电厂
+                </p>
+                <h3>光伏发电项目 110kV 送出线路跨越京包铁路施工工程</h3>
+                <div class="project-info">
+                  <div>
+                    <span class="project-label">服务内容</span>
+                    <p>完成跨越铁路段施工及安全防护</p>
+                  </div>
+                  <div>
+                    <span class="project-label">工程特点</span>
+                    <p>跨越既有铁路干线，安全及组织要求高</p>
+                  </div>
+                </div>
+                <button type="button" class="project-contact" data-contact-trigger>
+                  联系我们
+                  <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="support">
+              <div class="project-cover">
+                <img loading="lazy" decoding="async" src="imgs/service/case-tangshan-2025-annual-crossing-service.jpg" alt="国网冀北电力唐山供电公司2025年度输配电工程跨越及施工服务框架采购">
+              </div>
+              <div class="project-body">
+                <p class="project-meta">
+                  <span class="project-pin" aria-hidden="true">
+                    <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-pin"/></svg>
+                  </span>
+                  国网冀北电力唐山供电公司
+                </p>
+                <h3>2025 年度输配电工程跨越及施工服务框架采购项目</h3>
+                <div class="project-info">
+                  <div>
+                    <span class="project-label">服务内容</span>
+                    <p>提供年度跨越施工及技术服务支持</p>
+                  </div>
+                  <div>
+                    <span class="project-label">工程特点</span>
+                    <p>框架类服务项目，覆盖多场景、多项目协同</p>
+                  </div>
+                </div>
+                <button type="button" class="project-contact" data-contact-trigger>
+                  联系我们
+                  <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="projects-dots" data-carousel-dots role="tablist" aria-label="案例分组切换"></div>
+      </div>
+    </section>
+
     <section class="capability-section" id="capability">
       <div class="wrap">
         <div class="capability-head">
           <div class="capability-head-main">
             <p class="eyebrow">工程能力</p>
-            <h2>复杂交通场景下的核心竞争力</h2>
+            <h2>复杂交通场景跨越工程的系统化解决能力</h2>
           </div>
-          <p class="capability-head-desc">基于多年实战经验沉淀，我们建立了一套完整的跨越工程实施体系，确保高风险场景下的施工安全。</p>
+          <p class="capability-head-desc">已在高铁、铁路及高速公路等复杂交通场景中形成成熟实施体系，
+            确保施工安全、进度可控及工程高质量交付。
+            </p>
         </div>
 
         <div class="capability-grid">
@@ -331,250 +690,64 @@
       </div>
     </section>
 
-    <section class="projects-section" id="cases">
-      <div class="wrap">
-        <div class="projects-head">
-          <div>
-            <p class="eyebrow">典型案例</p>
-            <h2>已累计服务 <em>200+</em> 项国家重点工程</h2>
-          </div>
-          <a class="projects-more-link" href="cases.html">
-            查看更多案例
-            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-        </div>
-
-        <div class="projects-carousel" data-projects-carousel role="region" aria-roledescription="案例轮播" aria-label="典型案例" tabindex="0">
-          <button type="button" class="pager-arrow pager-arrow-side pager-arrow-prev" data-carousel-prev aria-label="上一组案例">
-            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="m15 5-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <button type="button" class="pager-arrow pager-arrow-side pager-arrow-next" data-carousel-next aria-label="下一组案例">
-            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="projects-track">
-            <article class="project-card">
-              <div class="project-cover">
-                <img loading="lazy" decoding="async" src="imgs/service/1.jpg" alt="容白线跨越津保高铁桥拆除工程">
-              </div>
-              <div class="project-body">
-                <p class="project-meta">
-                  <span class="project-pin" aria-hidden="true">
-                    <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-pin"/></svg>
-                  </span>
-                  中铁十二局 · S333 省道改线段工程
-                </p>
-                <h3>110kV 容白线跨越津保高铁桥拆除</h3>
-                <div class="project-info">
-                  <div>
-                    <span class="project-label">服务内容</span>
-                    <p>废旧 110kV 线路跨高铁桥段电力线拆除及跨越防护</p>
-                  </div>
-                  <div>
-                    <span class="project-label">工程特点</span>
-                    <p>跨运营高铁桥、铁路路产保护严、限点施工</p>
-                  </div>
-                </div>
-                <button type="button" class="project-contact" data-contact-trigger>
-                  联系我们
-                  <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </button>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-cover">
-                <img loading="lazy" decoding="async" src="imgs/service/3.jpg" alt="张家口光伏 110kV 跨京包铁路送出工程">
-              </div>
-              <div class="project-body">
-                <p class="project-meta">
-                  <span class="project-pin" aria-hidden="true">
-                    <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-pin"/></svg>
-                  </span>
-                  张家口发电厂 · 灰场光伏送出工程
-                </p>
-                <h3>110kV 跨京包铁路光伏送出工程</h3>
-                <div class="project-info">
-                  <div>
-                    <span class="project-label">服务内容</span>
-                    <p>光伏送出线路跨京包铁路跨越架搭拆与跨越施工</p>
-                  </div>
-                  <div>
-                    <span class="project-label">工程特点</span>
-                    <p>新能源送出、跨干线铁路、邻近带电环境</p>
-                  </div>
-                </div>
-                <button type="button" class="project-contact" data-contact-trigger>
-                  联系我们
-                  <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </button>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-cover">
-                <img loading="lazy" decoding="async" src="imgs/service/2.jpg" alt="蓟州 10kV 溜杨线越铁路线路拆除">
-              </div>
-              <div class="project-body">
-                <p class="project-meta">
-                  <span class="project-pin" aria-hidden="true">
-                    <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-pin"/></svg>
-                  </span>
-                  国网天津蓟州供电分公司 ·「1001 工程」
-                </p>
-                <h3>10kV 溜杨 214 越铁路线路拆除</h3>
-                <div class="project-info">
-                  <div>
-                    <span class="project-label">服务内容</span>
-                    <p>既有 10kV 配电线路 3#-4# 越铁路段拆除及现场恢复</p>
-                  </div>
-                  <div>
-                    <span class="project-label">工程特点</span>
-                    <p>铁路沿线作业、天窗点计划严格、跨部门协同</p>
-                  </div>
-                </div>
-                <button type="button" class="project-contact" data-contact-trigger>
-                  联系我们
-                  <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </button>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-cover">
-                <img loading="lazy" decoding="async" src="imgs/service/3.jpg" alt="10kV 大台线跨电气化铁路跨越架工程">
-              </div>
-              <div class="project-body">
-                <p class="project-meta">
-                  <span class="project-pin" aria-hidden="true">
-                    <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-pin"/></svg>
-                  </span>
-                  国网冀北秦皇岛抚宁区供电公司
-                </p>
-                <h3>10kV 大台线跨电气化铁路跨越架装拆</h3>
-                <div class="project-info">
-                  <div>
-                    <span class="project-label">服务内容</span>
-                    <p>李各庄分支跨电气化铁路改造工程中跨越架搭设、配合改造与拆除</p>
-                  </div>
-                  <div>
-                    <span class="project-label">工程特点</span>
-                    <p>电气化铁路环境、邻近带电作业、限时点作业</p>
-                  </div>
-                </div>
-                <button type="button" class="project-contact" data-contact-trigger>
-                  联系我们
-                  <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </button>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-cover">
-                <img loading="lazy" decoding="async" src="imgs/service/1.jpg" alt="通唐路 35kV 铺城铺海线落线安全防护">
-              </div>
-              <div class="project-body">
-                <p class="project-meta">
-                  <span class="project-pin" aria-hidden="true">
-                    <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-pin"/></svg>
-                  </span>
-                  天津市金地城市建设有限公司
-                </p>
-                <h3>35kV 铺城·铺海线落线安全防护工程</h3>
-                <div class="project-info">
-                  <div>
-                    <span class="project-label">服务内容</span>
-                    <p>通唐路西侧·南城东路南侧段 35kV 双回线路落线点安全防护与作业通道保障</p>
-                  </div>
-                  <div>
-                    <span class="project-label">工程特点</span>
-                    <p>城市道路施工同步、交通导改频繁、双回线协同</p>
-                  </div>
-                </div>
-                <button type="button" class="project-contact" data-contact-trigger>
-                  联系我们
-                  <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </button>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-cover">
-                <img loading="lazy" decoding="async" src="imgs/service/2.jpg" alt="临港铁路 11.01 接触网事故抢险复旧">
-              </div>
-              <div class="project-body">
-                <p class="project-meta">
-                  <span class="project-pin" aria-hidden="true">
-                    <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-pin"/></svg>
-                  </span>
-                  天津南环铁路电务有限责任公司
-                </p>
-                <h3>临港铁路专用线 11.01 事故抢险复旧</h3>
-                <div class="project-info">
-                  <div>
-                    <span class="project-label">服务内容</span>
-                    <p>事故段接触网及供电设备抢险复旧施工</p>
-                  </div>
-                  <div>
-                    <span class="project-label">工程特点</span>
-                    <p>应急响应、10 天完工、24 小时连续作业</p>
-                  </div>
-                </div>
-                <button type="button" class="project-contact" data-contact-trigger>
-                  联系我们
-                  <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </button>
-              </div>
-            </article>
-          </div>
-        </div>
-
-        <div class="projects-dots" data-carousel-dots role="tablist" aria-label="案例分组切换"></div>
-      </div>
-    </section>
-
-    <section class="qualification-section">
+    <section class="qualification-section" id="qualification">
       <div class="wrap qualification-inner">
-        <div class="qualification-copy">
+        <header class="qualification-intro">
           <p class="eyebrow">公司资质</p>
-          <h2>符合电网及基础设施<br>项目招标要求</h2>
-          <p>公司具备输电线路及相关工程施工所需资质，符合国家电网及南方电网准入标准，可提供完整资质文件。</p>
-          <ul class="qualification-list">
-            <li>
-              <span class="check" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="14" height="14"><path d="m5 12 5 5 9-10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h2>符合电网及政府项目<br><span class="qualification-intro-accent">招标准入</span>要求</h2>
+        </header>
+        <div class="qualification-sync">
+          <div class="qualification-copy-body">
+            <p>
+              公司拥有输电线路及电力工程施工所需核心资质，能够满足国家电网、南方电网及各级政府与国资平台类项目的招标准入与资料审核要求；可配合提供完整资质及合规证明文件，支持公开招标投标与商务材料提交。
+            </p>
+            <ul class="qualification-list">
+              <li>
+                <span class="check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="14" height="14"><path d="m5 12 5 5 9-10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                电力工程施工总承包资质
+              </li>
+              <li>
+                <span class="check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="14" height="14"><path d="m5 12 5 5 9-10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                安全生产许可证
+              </li>
+              <li>
+                <span class="check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="14" height="14"><path d="m5 12 5 5 9-10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                承装（修、试）电力设施许可证
+              </li>
+            </ul>
+          </div>
+          <div class="qualification-docs">
+          <button type="button" class="qualification-doc" data-preview-trigger data-preview-id="certificates" aria-label="打开资质证书预览">
+            <span class="qualification-doc-panel">
+              <strong class="qualification-doc-title">资质证书预览</strong>
+              <span class="qualification-doc-thumb-wrap" aria-hidden="true">
+                <img class="qualification-doc-thumb" src="imgs/tmp-zizhi.jpg" alt="" width="400" height="560" loading="lazy" decoding="async" />
               </span>
-              电力工程施工总承包资质
-            </li>
-            <li>
-              <span class="check" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="14" height="14"><path d="m5 12 5 5 9-10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </span>
-              安全生产许可证
-            </li>
-            <li>
-              <span class="check" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="14" height="14"><path d="m5 12 5 5 9-10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </span>
-              承装（修、试）电力设施许可
-            </li>
-          </ul>
-        </div>
-
-        <div class="qualification-docs">
-          <button type="button" class="qualification-doc" data-preview-trigger data-preview-id="certificates" aria-label="预览资质证书">
-            <span class="qualification-doc-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="30" height="30"><path d="M6 3h9l5 5v13H6Zm9 0v5h5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
             </span>
-            <span>资质证书预览</span>
-            <em class="qualification-doc-cta">点击预览 →</em>
-          </button>
-          <button type="button" class="qualification-doc" data-preview-trigger data-preview-id="compliance" aria-label="预览合规文件">
-            <span class="qualification-doc-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="30" height="30"><path d="M6 3h9l5 5v13H6Zm9 0v5h5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            <span class="qualification-doc-bottom">
+              <span class="qualification-doc-desc">点击查看资质证书高清大图</span>
+              <svg class="qualification-doc-chevron" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m9 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
-            <span>合规文件预览</span>
-            <em class="qualification-doc-cta">点击预览 →</em>
           </button>
+          <button type="button" class="qualification-doc" data-preview-trigger data-preview-id="compliance" aria-label="打开合规文件预览">
+            <span class="qualification-doc-panel">
+              <strong class="qualification-doc-title">合规文件预览</strong>
+              <span class="qualification-doc-thumb-wrap" aria-hidden="true">
+                <img class="qualification-doc-thumb" src="imgs/tmp-anzhi.jpg" alt="" width="400" height="560" loading="lazy" decoding="async" />
+              </span>
+            </span>
+            <span class="qualification-doc-bottom">
+              <span class="qualification-doc-desc">点击查看合规文件高清大图</span>
+              <svg class="qualification-doc-chevron" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m9 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          </div>
         </div>
       </div>
     </section>
@@ -583,25 +756,29 @@
       <div class="wrap">
         <div class="collaboration-head">
           <p class="eyebrow">合作模式</p>
-          <h2>灵活的合作模式，满足不同项目方的需求</h2>
+          <h2>灵活的合作模式，<br>满足不同项目方的需求</h2>
         </div>
 
         <div class="collaboration-grid">
           <article class="collaboration-card">
-            <h3><span class="collaboration-index" aria-hidden="true">①</span>专项工程总承包（跨越工程）</h3>
+            <h3><span class="collaboration-index" aria-hidden="true">01</span>专项工程总承包<br>（跨越工程）</h3>
             <p>复杂跨越场景一体化承包，安全、效率与合规并重</p>
+            <img class="collaboration-illustration" src="imgs/collaboration/crop_0.png" alt="高铁、高架桥与输电线路插画，示意专项跨越工程总承包" width="275" height="156" loading="lazy" decoding="async" />
           </article>
           <article class="collaboration-card">
-            <h3><span class="collaboration-index" aria-hidden="true">②</span>输电线路迁改工程</h3>
+            <h3><span class="collaboration-index" aria-hidden="true">02</span>输电线路迁改工程</h3>
             <p>快速响应城市与项目需求，迁改方案成熟可控</p>
+            <img class="collaboration-illustration" src="imgs/collaboration/crop_1.png" alt="输电铁塔与架空线路插画，示意输电线路迁改工程" width="275" height="156" loading="lazy" decoding="async" />
           </article>
           <article class="collaboration-card">
-            <h3><span class="collaboration-index" aria-hidden="true">③</span>技术服务与方案支持</h3>
+            <h3><span class="collaboration-index" aria-hidden="true">03</span>技术服务与方案支持</h3>
             <p>提供前期咨询、方案设计及关键技术支撑</p>
+            <img class="collaboration-illustration" src="imgs/collaboration/crop_2.png" alt="清单与圆规插画，示意技术服务与方案支持" width="275" height="156" loading="lazy" decoding="async" />
           </article>
           <article class="collaboration-card">
-            <h3><span class="collaboration-index" aria-hidden="true">④</span>项目协同施工</h3>
+            <h3><span class="collaboration-index" aria-hidden="true">04</span>项目协同施工</h3>
             <p>多方协同机制，保障工程进度与质量双达标</p>
+            <img class="collaboration-illustration" src="imgs/collaboration/crop_3.png" alt="桥梁施工、吊车与输电铁塔插画，示意项目协同施工" width="275" height="156" loading="lazy" decoding="async" />
           </article>
         </div>
       </div>
@@ -622,8 +799,7 @@
                 </div>
                 <div>
                   <span class="contact-hotline-label">张经理</span>
-                  <strong>13903250383</strong>
-    
+                  <a class="contact-hotline-tel" href="tel:13903250383"><strong>13903250383</strong></a>
                 </div>
               </div>
 
@@ -633,7 +809,7 @@
                 </div>
                 <div>
                   <span class="contact-hotline-label">边经理</span>
-                  <strong>18633102503</strong>
+                  <a class="contact-hotline-tel" href="tel:18633102503"><strong>18633102503</strong></a>
                 </div>
               </div>
             </div>
@@ -641,11 +817,11 @@
             <div class="contact-qrs">
               <div class="contact-qr-group">
                 <figure class="contact-qr">
-                  <img loading="lazy" decoding="async" src="imgs/service/qr-z.png" alt="微信扫码联系二维码">
+                  <img loading="lazy" decoding="async" src="imgs/qr-z.png" alt="微信扫码联系二维码">
                   <figcaption>微信扫码联系</figcaption>
                 </figure>
                 <figure class="contact-qr">
-                  <img loading="lazy" decoding="async" src="imgs/service/QR1.png" alt="业务咨询微信二维码,扫码添加边经理">
+                  <img loading="lazy" decoding="async" src="imgs/QR1.png" alt="业务咨询微信二维码,扫码添加边经理">
                   <figcaption>业务咨询微信</figcaption>
                 </figure>
               </div>
@@ -710,42 +886,31 @@
         </button>
       </div>
 
-      <p class="contact-dialog-lead">欢迎咨询项目方案、施工配合、资质证明等事宜，我们将在 48 小时内给予反馈。</p>
+      <p class="contact-dialog-lead">欢迎咨询项目方案、施工配合、资质证明等事宜。</p>
 
-      <div class="contact-dialog-hotlines">
-        <div class="contact-hotline">
-          <div class="contact-hotline-icon" aria-hidden="true">
-            <svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#icon-phone"/></svg>
-          </div>
-          <div>
+      <div class="contact-dialog-people">
+        <article class="contact-person">
+          <div class="contact-hotline">
             <span class="contact-hotline-label">张经理</span>
-            <strong>13903250383</strong>
+            <a class="contact-hotline-tel" href="tel:13903250383"><strong>13903250383</strong></a>
           </div>
-        </div>
-        <div class="contact-hotline">
-          <div class="contact-hotline-icon" aria-hidden="true">
-            <svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#icon-phone"/></svg>
-          </div>
-          <div>
+          <figure class="contact-qr">
+            <img loading="lazy" decoding="async" src="imgs/qr-z.png" alt="张经理微信二维码,扫码添加张经理">
+          </figure>
+        </article>
+        <article class="contact-person">
+          <div class="contact-hotline">
             <span class="contact-hotline-label">边经理</span>
-            <strong>18633102503</strong>
+            <a class="contact-hotline-tel" href="tel:18633102503"><strong>18633102503</strong></a>
           </div>
-        </div>
-      </div>
-
-      <div class="contact-dialog-qrs">
-        <figure class="contact-qr">
-          <img loading="lazy" decoding="async" src="imgs/service/qr-z.png" alt="微信扫码联系二维码">
-          <figcaption>微信扫码联系</figcaption>
-        </figure>
-        <figure class="contact-qr">
-          <img loading="lazy" decoding="async" src="imgs/service/QR1.png" alt="业务咨询微信二维码,扫码添加边经理">
-          <figcaption>业务咨询微信</figcaption>
-        </figure>
+          <figure class="contact-qr">
+            <img loading="lazy" decoding="async" src="imgs/QR1.png" alt="边经理微信二维码,扫码添加边经理">
+          </figure>
+        </article>
       </div>
 
       <div class="contact-dialog-meta">
-        <p><span aria-hidden="true">✉</span> 18633102503@163.com</p>
+        <p><span aria-hidden="true">✉</span> <a href="mailto:18633102503@163.com">18633102503@163.com</a></p>
         <p><span aria-hidden="true">📍</span> 北京市门头沟区斋堂大街45号科技楼ZT685室</p>
       </div>
     </div>
@@ -755,7 +920,7 @@
     <div class="wrap footer-grid">
       <div class="footer-brand">
         <a class="footer-logo" href="#home" aria-label="北京铁鑫达电力工程有限公司首页">
-          <img class="footer-logo-img" src="imgs/service/logo-white.png" alt="北京铁鑫达电力工程有限公司">
+          <img class="footer-logo-img" src="imgs/logo-white.png" alt="北京铁鑫达电力工程有限公司">
         </a>
         <p>专注输电线路交通基础设施跨越工程服务商，致力于为电网及交通项目提供安全、高效、合规的跨越与迁改解决方案。</p>
       </div>
@@ -763,10 +928,11 @@
       <div class="footer-col">
         <h3>专业模块</h3>
         <ul>
-          <li><a href="#about">公司定位</a></li>
           <li><a href="#services">核心业务</a></li>
-          <li><a href="#capability">工程能力</a></li>
+          <li><a href="#about">公司定位</a></li>
           <li><a href="#cases">典型案例</a></li>
+          <li><a href="#capability">工程能力</a></li>
+          <li><a href="#qualification">公司资质</a></li>
         </ul>
       </div>
 

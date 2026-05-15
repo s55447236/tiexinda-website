@@ -1227,29 +1227,35 @@ body.is-nav-open .nav-overlay {
 }
 
 .scope-card {
-  padding: 2.25rem 2rem 2.375rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 0.875rem 1rem;
+  padding: 1.75rem 1.625rem 1.8125rem;
 }
 
 .scope-icon {
   display: grid;
   place-items: center;
-  width: 3.5rem;
-  height: 3.5rem;
-  margin-bottom: 1.75rem;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  width: 2.875rem;
+  height: 2.875rem;
   background: rgba(0, 111, 108, 0.08);
   color: var(--accent);
   border-radius: 0.5rem;
 }
 
 .scope-card h3 {
-  margin: 0 0 1rem;
+  margin: 0;
   color: #111814;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 800;
-  line-height: 1.2;
+  line-height: 1.28;
 }
 
 .scope-card ul {
+  grid-column: 1 / -1;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1258,11 +1264,11 @@ body.is-nav-open .nav-overlay {
 .scope-card li {
   position: relative;
   padding-left: 1.25rem;
-  margin-top: 0.875rem;
+  margin-top: 0.625rem;
   color: #4d5a63;
-  font-size: 0.875rem;
+  font-size: 0.8438rem;
   font-weight: 600;
-  line-height: 1.5;
+  line-height: 1.45;
 }
 
 .scope-card li:first-child {
@@ -1425,6 +1431,40 @@ body.is-nav-open .nav-overlay {
   min-width: 0;
 }
 
+.projects-track .project-cover {
+  aspect-ratio: 16 / 9;
+}
+
+.projects-track .project-body {
+  padding: 1.25rem 1.375rem 1.5rem;
+}
+
+.projects-track .project-body h3 {
+  margin: 0.625rem 0 1rem;
+  padding-bottom: 0.875rem;
+  font-size: 1.1875rem;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.projects-track .project-info {
+  gap: 1rem;
+}
+
+.projects-track .project-info p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.projects-track .project-contact {
+  margin-top: 1.125rem;
+}
+
 .projects-dots {
   display: flex;
   align-items: center;
@@ -1525,6 +1565,14 @@ body.is-nav-open .nav-overlay {
 @media (max-width: 48rem) {
   .projects-track .project-card {
     flex: 0 0 100%;
+  }
+
+  .projects-track .project-body h3 {
+    margin: 0.5rem 0 0.875rem;
+    padding-bottom: 1rem;
+    font-size: 1.125rem;
+    line-height: 1.42;
+    -webkit-line-clamp: 4;
   }
 
   .pager-arrow {
@@ -2198,14 +2246,17 @@ body.contact-open .contact-modal {
 }
 
 .collaboration-card {
-  --collab-pad-x: 1.625rem;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  min-height: 18.25rem;
+  display: grid;
+  grid-template-columns: 2.625rem minmax(0, 1fr) auto;
+  grid-template-areas:
+    "index title art"
+    "index body art";
+  align-items: start;
+  min-height: auto;
   overflow: hidden;
-  gap: 1rem;
-  padding: 1.625rem var(--collab-pad-x) 0;
+  gap: 0.875rem;
+  padding: 1.5rem 1.375rem;
   text-align: left;
 }
 
@@ -2227,21 +2278,19 @@ body.contact-open .contact-modal {
 }
 
 .collaboration-card h3 {
-  display: grid;
-  grid-template-columns: 2.625rem minmax(0, 1fr);
-  justify-content: start;
-  align-items: center;
-  gap: 0.875rem;
+  grid-area: title;
+  display: block;
   margin: 0;
   color: #111814;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 800;
-  line-height: 1.35;
+  line-height: 1.4;
   text-align: left;
 }
 
 .collaboration-index {
-  display: inline-flex;
+  grid-area: index;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 2.625rem;
@@ -2256,21 +2305,24 @@ body.contact-open .contact-modal {
 }
 
 .collaboration-card p {
-  min-height: 4.75rem;
+  grid-area: body;
+  min-height: 0;
   margin: 0;
   color: #66717b;
-  font-size: 0.875rem;
+  font-size: 0.8438rem;
   font-weight: 400;
-  line-height: 1.8;
+  line-height: 1.65;
   text-align: left;
 }
 
 .collaboration-illustration {
-  display: block;
-  width: calc(100% + 2 * var(--collab-pad-x));
+  grid-area: art;
+  align-self: center;
+  width: 5rem;
+  min-width: 5rem;
   height: auto;
-  margin: auto calc(-1 * var(--collab-pad-x)) 0;
-  border-radius: 0 0 var(--card-radius) var(--card-radius);
+  margin: 0;
+  opacity: 0.92;
 }
 
 /* ---------------------------------
@@ -2646,8 +2698,8 @@ body.contact-open .contact-modal {
   .contact-actions {
     grid-column: 1;
     grid-row: auto;
-    margin-top: 2.5rem;
-    padding: 2rem 1.75rem 1.75rem;
+    margin-top: 2rem;
+    padding: 1.625rem 1.5rem 1.5rem;
   }
   .contact-meta {
     margin-top: 2rem;
@@ -3452,16 +3504,16 @@ body.preview-open {
 
   .hero .wrap {
     height: auto;
-    min-height: 34rem;
+    min-height: 32rem;
     max-height: none;
-    padding-top: 5.5rem;
-    padding-bottom: 2.5rem;
+    padding-top: 5.25rem;
+    padding-bottom: 2.25rem;
     align-items: flex-start;
   }
 
   .hero-copy {
     max-width: 100%;
-    padding: 1rem 0 0.5rem;
+    padding: 1.25rem 0 0.875rem;
   }
 
   .hero-copy h1 {
@@ -3487,19 +3539,20 @@ body.preview-open {
 
   .hero-copy > p {
     max-width: 31rem;
-    font-size: 0.9063rem;
-    line-height: 1.7;
+    font-size: 0.9375rem;
+    line-height: 1.78;
   }
 
   .hero-meta {
     gap: 0.625rem;
-    margin-top: 1rem;
+    margin-top: 1.125rem;
   }
 
   .hero-actions {
     flex-direction: column;
     align-items: stretch;
-    gap: 0.875rem;
+    gap: 1rem;
+    margin-top: 1.625rem;
   }
 
   .hero-actions .button-primary,
@@ -3558,13 +3611,21 @@ body.preview-open {
   }
 
   .project-body {
-    padding: 1.375rem 1.375rem 1.625rem;
+    padding: 1.25rem 1.25rem 1.375rem;
   }
 
   .project-body h3 {
-    font-size: 1.1875rem;
-    margin: 0.625rem 0 1.25rem;
+    font-size: 1.125rem;
+    margin: 0.5rem 0 0.875rem;
+    padding-bottom: 0.875rem;
+  }
+
+  .projects-track .project-body h3 {
+    margin: 0.5rem 0 0.875rem;
     padding-bottom: 1rem;
+    font-size: 1.125rem;
+    line-height: 1.42;
+    -webkit-line-clamp: 4;
   }
 
   .projects-head {
@@ -3602,12 +3663,24 @@ body.preview-open {
   }
 
   .collaboration-card {
-    --collab-pad-x: 1.5rem;
-    padding: 1.75rem var(--collab-pad-x) 0;
+    grid-template-columns: 2.5rem minmax(0, 1fr) 4.5rem;
+    gap: 0.75rem;
+    padding: 1.25rem 1.125rem;
   }
 
   .collaboration-card h3 {
     max-width: 100%;
+    font-size: 0.9375rem;
+  }
+
+  .collaboration-card p {
+    font-size: 0.8125rem;
+    line-height: 1.55;
+  }
+
+  .collaboration-illustration {
+    width: 4.5rem;
+    min-width: 4.5rem;
   }
 
   .footer-grid {
@@ -3679,14 +3752,14 @@ body.preview-open {
   }
 
   .hero .wrap {
-    min-height: calc(100svh - 3.625rem);
+    min-height: 29.5rem;
     padding-top: 4.75rem;
     padding-bottom: 1.75rem;
   }
 
   .hero-copy > p {
-    font-size: 0.8438rem;
-    line-height: 1.65;
+    font-size: 0.875rem;
+    line-height: 1.72;
   }
 
   .hero-kicker {
@@ -3696,7 +3769,7 @@ body.preview-open {
 
   .hero-meta {
     gap: 0.5rem;
-    margin-top: 0.875rem;
+    margin-top: 1rem;
   }
 
   .hero-meta span:last-child {
@@ -3704,7 +3777,7 @@ body.preview-open {
   }
 
   .hero-actions {
-    margin-top: 1.375rem;
+    margin-top: 1.5rem;
   }
 
   .about-section,
@@ -3714,7 +3787,58 @@ body.preview-open {
   .projects-section,
   .contact-section {
     padding-top: 3.25rem;
-    padding-bottom: 3.5rem;
+    padding-bottom: 3rem;
+  }
+
+  .scope-card {
+    grid-template-columns: minmax(0, 1fr) 2.625rem;
+    padding: 1.25rem 1.125rem 1.3125rem;
+    gap: 0.625rem 0.75rem;
+  }
+
+  .scope-icon {
+    width: 2.625rem;
+    height: 2.625rem;
+  }
+
+  .scope-card h3 {
+    font-size: 1rem;
+  }
+
+  .scope-card li {
+    font-size: 0.8125rem;
+    line-height: 1.4;
+  }
+
+  .projects-track .project-cover,
+  .project-cover {
+    aspect-ratio: 16 / 8.8;
+  }
+
+  .projects-track .project-body h3 {
+    font-size: 1.0625rem;
+    line-height: 1.42;
+  }
+
+  .project-info {
+    gap: 0.875rem;
+  }
+
+  .project-info p {
+    line-height: 1.6;
+  }
+
+  .project-contact {
+    margin-top: 1rem;
+  }
+
+  .collaboration-grid {
+    gap: 0.875rem;
+  }
+
+  .contact-section {
+    padding-top: 3.25rem;
+    padding-bottom: 2.75rem;
   }
 
   .about-stat {

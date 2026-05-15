@@ -2,30 +2,60 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://www.tiexinda.com/</loc>
-    <lastmod>2026-04-21</lastmod>
+    <loc>https://bjtxd.cn/</loc>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://www.tiexinda.com/og.jpg</image:loc>
+      <image:loc>https://bjtxd.cn/og.jpg</image:loc>
       <image:title>北京铁鑫达电力工程有限公司 · 输电线路跨越专业服务商</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://www.tiexinda.com/cases.html</loc>
-    <lastmod>2026-04-21</lastmod>
+    <loc>https://bjtxd.cn/cases.html</loc>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.tiexinda.com/privacy.html</loc>
-    <lastmod>2026-04-21</lastmod>
+    <loc>https://bjtxd.cn/power-engineering.html</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bjtxd.cn/railway-crossing.html</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bjtxd.cn/line-relocation.html</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bjtxd.cn/crossing-frame.html</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bjtxd.cn/site-map.html</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://bjtxd.cn/privacy.html</loc>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
   <url>
-    <loc>https://www.tiexinda.com/terms.html</loc>
-    <lastmod>2026-04-21</lastmod>
+    <loc>https://bjtxd.cn/terms.html</loc>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>

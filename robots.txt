@@ -16,4 +16,4 @@ Disallow: /
 User-agent: DotBot
 Disallow: /
 
-Sitemap: https://www.tiexinda.com/sitemap.xml
+Sitemap: https://bjtxd.cn/sitemap.xml

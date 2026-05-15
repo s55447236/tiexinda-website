@@ -1679,6 +1679,137 @@ body.is-nav-open .nav-overlay {
   transform: translateX(0.1875rem);
 }
 
+.case-detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.case-detail-tags span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.25rem;
+  padding: 0 0.875rem;
+  border: 0.0625rem solid rgba(0, 111, 108, 0.18);
+  border-radius: 999rem;
+  background: rgba(255, 255, 255, 0.76);
+  color: var(--accent);
+  font-size: 0.8125rem;
+  font-weight: 800;
+}
+
+.case-detail-media {
+  margin: 0 0 2rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background: #f6f8f7;
+  border: 0.0625rem solid rgba(17, 24, 32, 0.08);
+}
+
+.case-detail-media img {
+  display: block;
+  width: 100%;
+  max-height: 34rem;
+  object-fit: cover;
+}
+
+.case-detail-media figcaption {
+  padding: 1rem 1.25rem;
+  color: #59656d;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.case-detail-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.case-detail-summary .scope-card p {
+  margin: 0;
+  color: #4f5b66;
+  line-height: 1.7;
+}
+
+.case-detail-content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.case-detail-content section,
+.case-detail-related,
+.case-detail-cta {
+  border: 0.0625rem solid rgba(17, 24, 32, 0.08);
+  border-radius: 0.5rem;
+  background: #ffffff;
+  box-shadow: 0 1rem 2rem rgba(17, 24, 32, 0.05);
+}
+
+.case-detail-content section {
+  padding: 1.5rem;
+}
+
+.case-detail-content h2,
+.case-detail-related h2,
+.case-detail-cta h2 {
+  margin: 0 0 0.75rem;
+  color: #111820;
+  font-size: 1.25rem;
+  line-height: 1.35;
+}
+
+.case-detail-content p,
+.case-detail-cta p {
+  margin: 0;
+  color: #4f5b66;
+  line-height: 1.85;
+}
+
+.case-detail-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.75rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #f5fbf9, #ffffff);
+}
+
+.case-detail-related {
+  padding: 1.5rem;
+}
+
+.case-detail-related ul {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.875rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.case-detail-related a {
+  display: block;
+  min-height: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: rgba(0, 111, 108, 0.06);
+  color: #123331;
+  font-weight: 800;
+  line-height: 1.55;
+  text-decoration: none;
+}
+
+.case-detail-related a:hover {
+  color: var(--accent);
+  background: rgba(0, 111, 108, 0.1);
+}
+
 /* 支持 hover 的设备:按钮从卡片底部翻出 */
 @media (hover: hover) {
   .project-card .project-contact {
@@ -3608,6 +3739,17 @@ body.preview-open {
   .project-info {
     grid-template-columns: 1fr;
     gap: 1.125rem;
+  }
+
+  .case-detail-summary,
+  .case-detail-content,
+  .case-detail-related ul {
+    grid-template-columns: 1fr;
+  }
+
+  .case-detail-cta {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .project-body {

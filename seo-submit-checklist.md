@@ -36,6 +36,22 @@ https://bjtxd.cn/privacy.html
 https://bjtxd.cn/terms.html
 ```
 
+案例详情页：
+
+```text
+https://bjtxd.cn/projects/anding-110kv-jinghu-railway-crossing.html
+https://bjtxd.cn/projects/rongbai-110kv-jinbao-hsr-protection.html
+https://bjtxd.cn/projects/jizhou-10kv-panyang-rail-removal.html
+https://bjtxd.cn/projects/datai-10kv-electrified-railway-scaffold.html
+https://bjtxd.cn/projects/tongtang-35kv-line-drop-protection.html
+https://bjtxd.cn/projects/lingang-catenary-emergency-repair.html
+https://bjtxd.cn/projects/wujiapai-10kv-jinji-cable-underground.html
+https://bjtxd.cn/projects/liuziying-110kv-substation-jinji-cable-service.html
+https://bjtxd.cn/projects/wenfeng-pipeline-caofeidian-railway-underpass.html
+https://bjtxd.cn/projects/zhangjiakou-pv-110kv-jingbao-railway-crossing.html
+https://bjtxd.cn/projects/tangshan-2025-crossing-service-framework.html
+```
+
 ## 2. 上传到 COS 的文件
 
 先上传并覆盖这两个文件：
